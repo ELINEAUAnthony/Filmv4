@@ -16,7 +16,7 @@
       
   <ion-grid *ngIf="movies">
     <ion-row>
-      <ion-col col-6 *ngFor="let movie of movies">
+      <ion-col size="6" *ngFor="let movie of movies">
         <ion-card>
         <img [src]= "'https://image.tmdb.org/t/p/w500/'+ movie.poster_path" (click)="goToDetail(movie)" />
       </ion-card>
@@ -24,8 +24,7 @@
     </ion-row>
   </ion-grid> 
 
-  <button [routerLink]="['/detail/']" routerDirection="forward" >salut</button>
-
+  
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="">
     </ion-infinite-scroll-content>

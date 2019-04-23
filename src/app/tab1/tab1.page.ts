@@ -89,17 +89,16 @@ export class Tab1Page implements OnInit {
           this.movies.push(movie);
         });
       }));
-      infiniteScroll.complete();
+      infiniteScroll.target.complete();
     }, 500);
   }
 
-  scanCode(movie:IMovie){
+  scanCode(){
     this.barcodeScanner.scan().then(barcodeData=>{
     this.scannedCode = barcodeData.text;
     this.navCtrl.navigateForward(['/essai', this.scannedCode])
   })
   }
-
 
   ngOnDestroy(): void {
     if(this.subs){
