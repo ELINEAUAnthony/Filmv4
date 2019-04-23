@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-toolbar color="dark">
+    <div  class="popularMovie-navBar" padding>
+    <ion-title>Film par Popularité</ion-title>
+    <button ion-button icon-left (click)="scanCode()"><ion-icon name="qr-scanner"></ion-icon>Scan</button>
+  </div>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-searchbar placeholder="Recherche un film" [(ngModel)]="search" (keyup)="movieFilter($event.target.value)"></ion-searchbar>
+      
+  <ion-grid *ngIf="movies">
+    <ion-row>
+      <ion-col col-6 *ngFor="let movie of movies">
+        <ion-card>
+        <img [src]= "'https://image.tmdb.org/t/p/w500/'+ movie.poster_path" (click)="goToDetail(movie)" />
+      </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+
+  <button [routerLink]="['/detail/']" routerDirection="forward" >salut</button>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
