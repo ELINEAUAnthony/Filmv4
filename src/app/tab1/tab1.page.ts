@@ -96,10 +96,10 @@ export class Tab1Page implements OnInit {
   scanCode(movie:IMovie){
     this.barcodeScanner.scan().then(barcodeData=>{
     this.scannedCode = barcodeData.text;
-    // this.navCtrl.navigateForward('detail/', {id : barcodeData.text.toString()
+    this.navCtrl.navigateForward(['/essai', this.scannedCode])
   })
-    
   }
+
 
   ngOnDestroy(): void {
     if(this.subs){

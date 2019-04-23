@@ -9,34 +9,33 @@ import { FavoriteMovieService } from '../favorite-movie.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  favoriteMovies: IMovie[] = [];
+  favoriteMovies: IMovie[] = []
 
 
-  constructor(public navCtrl: NavController,
-              // public favortieMovieService: FavoriteMovieService
-              ) {
+  constructor(public navCtrl: NavController) {
 }
 ionViewDidLoad() {
   console.log('ionViewDidLoad FavoritePage');
 }
 
-// ionViewWillEnter() {
-//   this.initFavoriteMovies();
-// }
+ionViewWillEnter() {
+  this.initFavoriteMovies();
+}
 
-//  private initFavoriteMovies() {
-//   this.favortieMovieService
-//     .getFavoriteMovies()
-//     .then(favs => (this.favoriteMovies = favs))
-//     }
+ private initFavoriteMovies() {
+  // this.favortieMovieService
+  //   .getFavoriteMovies()
+  //   .then(favs => (this.favoriteMovies = favs))
+    }
     
     findMovie() {
       this.navCtrl.navigateForward('');
     }
    
-//     goToDetail(movie: IMovie) {
-//       this.navCtrl.navigateForward('detail' + movie);
-//     }
-}
+    goToDetail(movie: IMovie) {
+
+      this.navCtrl.navigateForward(['/essai', movie.id]);
+    }
+} 
 
 

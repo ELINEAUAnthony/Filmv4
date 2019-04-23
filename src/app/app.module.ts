@@ -12,6 +12,9 @@ import { AppComponent } from './app.component';
 import { MovieApiProviderService } from './api/movie-api-provider.service';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { FavoriteMovieService } from '../app/favorite-movie.service';
+import { IonicStorageModule } from '@ionic/storage';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +23,9 @@ import { FavoriteMovieService } from '../app/favorite-movie.service';
   [BrowserModule,
    IonicModule.forRoot(), 
    AppRoutingModule,
-   HttpClientModule
+   HttpClientModule,
+   IonicStorageModule,
+   NgxQRCodeModule
   ],
   providers: [
     StatusBar,

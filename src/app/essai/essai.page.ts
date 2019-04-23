@@ -29,7 +29,7 @@ favoriteMovies: IMovie[] = []
 
 createCode(){
   this.createdCode = this.activatedRoute.snapshot.params['id'].toString();
-  console.log(this.movie.toString())
+  console.log(this.activatedRoute.snapshot.params['id'].toString())
 }
 
 }
