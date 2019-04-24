@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'detail/:id', loadChildren: './detail/detail.module#DetailPageModule' },
   { path: 'essai', loadChildren: './essai/essai.module#EssaiPageModule' },
   { path: 'essai/:id', loadChildren: './essai/essai.module#EssaiPageModule' }
+  //{ path: '', loadChildren: './favorite-movie.service#FavoriteMovieService'}
 ];
 @NgModule({
   imports: [

@@ -24,7 +24,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
    IonicModule.forRoot(), 
    AppRoutingModule,
    HttpClientModule,
-   IonicStorageModule,
+   IonicStorageModule.forRoot(),
    NgxQRCodeModule
   ],
   providers: [

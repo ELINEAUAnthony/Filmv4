@@ -12,7 +12,7 @@ export class Tab2Page {
   favoriteMovies: IMovie[] = []
 
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public favoriteMovieService: FavoriteMovieService ) {
 }
 ionViewDidLoad() {
   console.log('ionViewDidLoad FavoritePage');
@@ -23,9 +23,9 @@ ionViewWillEnter() {
 }
 
  private initFavoriteMovies() {
-  // this.favortieMovieService
-  //   .getFavoriteMovies()
-  //   .then(favs => (this.favoriteMovies = favs))
+   this.favoriteMovieService
+    .getFavoriteMovies()
+    .then(favs => (this.favoriteMovies = favs))
     }
     
     findMovie() {

@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+    <ion-back-button></ion-back-button>
     <ion-title *ngIf="movie">{{movie.title}}</ion-title>
     <ion-buttons end>
     <button ion-button icon-only clear style="font-size: 1 em; " (click)="toggleFavorite()">

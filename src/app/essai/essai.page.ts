@@ -15,15 +15,26 @@ isFavorite:boolean=false;
 qrData = null;
 createdCode = null;
 favoriteMovies: IMovie[] = []
+
   constructor(public movieApiProvider: MovieApiProviderService,
-              public activatedRoute: ActivatedRoute
+              public activatedRoute: ActivatedRoute,
+              public favoriteMovieService: FavoriteMovieService
               ) { }
+
+   toggleFavorite(): void {
+      this.isFavorite =!this.isFavorite;
+      this.favoriteMovieService.toogleFavoriteMovie(this.movie); 
+  }            
 
   ngOnInit() {
     this.movieApiProvider.getFilmbyid(this.activatedRoute.snapshot.params['id']).subscribe(
       data => {
           this.movie = data;
           console.log(this.movie);
+
+          this.favoriteMovieService
+          .isFavoriteMovie(this.movie)
+          .then (value => (this.isFavorite = value));
   })
 }
 

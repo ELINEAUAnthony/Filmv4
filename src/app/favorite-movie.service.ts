@@ -1,9 +1,12 @@
-import { Injectable } from "@angular/core";
+import { Injectable, NgModule, forwardRef } from "@angular/core";
 import { Storage } from "@ionic/storage";
 import { IMovie } from "../app/Interface/IMovie";
 
 
 const MOVIE_KEY = "movie_";
+
+@NgModule({providers: [forwardRef(() => FavoriteMovieService)]})
+
 
 @Injectable({
   providedIn: 'root'
