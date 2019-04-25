@@ -14,6 +14,8 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { FavoriteMovieService } from '../app/favorite-movie.service';
 import { IonicStorageModule } from '@ionic/storage';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
     MovieApiProviderService,
     BarcodeScanner,
     FavoriteMovieService,
+    InAppBrowser,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

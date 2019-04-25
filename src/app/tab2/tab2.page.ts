@@ -34,7 +34,7 @@ ionViewWillEnter() {
    
     goToDetail(movie: IMovie) {
 
-      this.navCtrl.navigateForward(['/essai', movie.id]);
+      this.navCtrl.navigateForward(['/essai', movie]);
     }
 } 
 
