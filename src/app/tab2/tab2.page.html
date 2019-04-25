@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Favori
+      Favorie
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -21,7 +21,7 @@
           </ion-col> 
           <ion-col col-2>
             <ion-badge color="primary">{{movie.vote_average}}</ion-badge>
-          </ion-col>
+          </ion-col><nav></nav>
         </ion-row>
       </ion-item>
     </ion-list>
@@ -30,7 +30,7 @@
   <ng-template #noFavorite>
     <ion-card>
       <ion-card-content>
-        <h2>Tu n'as pas de Favori</h2>
+        <h2>Tu n'as pas de Favorie</h2>
         <button ion-button icon-left full (click)="findMovie()">
           <ion-icon name="search"></ion-icon>
           Recherche un film

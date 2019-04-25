@@ -27,7 +27,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
    AppRoutingModule,
    HttpClientModule,
    IonicStorageModule.forRoot(),
-   NgxQRCodeModule
+   NgxQRCodeModule,
   ],
   providers: [
     StatusBar,

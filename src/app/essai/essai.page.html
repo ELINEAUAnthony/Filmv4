@@ -1,11 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-back-button></ion-back-button>
-    <ion-title *ngIf="movie">{{movie.title}}</ion-title>
-    <ion-buttons end>
-    <button ion-button icon-only clear style="font-size: 1 em; " (click)="toggleFavorite()">
+    <ion-back-button style="float:left;" ></ion-back-button>
+    <ion-buttons end style="float:right;">
+    <button ion-button icon-only clear style="font-size: 1em; " (click)="toggleFavorite()">
         <ion-icon [name]="isFavorite ? 'star':'star-outline'"></ion-icon></button>
     </ion-buttons>
+    <ion-title style="text-align:center;" *ngIf="movie">{{movie.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -23,8 +23,7 @@
     <ion-card-content>{{movie.overview}}</ion-card-content>
   </ion-card>
 
-  <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button>
+  <button ion-button full icon-left style= "height: 30px; width: 100%;" (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button>
 
   <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
-
 </ion-content>
